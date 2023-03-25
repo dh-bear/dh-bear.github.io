@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+@import url(/src/css/sidenav.css);
+
+:root{
+    font-family: 'Delicious Handrawn', cursive;
+}
+#title{
+    text-align: center;
+    margin-top: -2rem;
+}
+
+#title h2{
+    font-size: 300%;
+}
+
+#title img{
+    width: 40%;
+}
+
+#bio{
+    display: none;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#news{
+    display: none;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
