@@ -26,6 +26,7 @@
 
   /* the navigation menu button */
  #navTog{
+    position: fixed;
     margin-top: 3rem;
     text-decoration: none;
     /* text-shadow: 2px 2px 2px red; */

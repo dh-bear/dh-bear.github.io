@@ -5,33 +5,88 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/src/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 <body>
+  <div id="backBtnDiv"><button id="scoll-back" onclick="scrollToPrev()"><ion-icon name="chevron-up"/></button></div>
   <ion-icon name="menu" id="navTog" onclick="toggleNav()"></ion-icon>
   <div id="mySidenav" class="sidenav">
-    <a href="#">About</a>
-    <a href="#">Skills</a>
-    <a href="#">Experience</a>
-    <a href="#">Personal</a>
-    <a href="#">Contact</a>
+    <a href="#main"><ion-icon name="home"></ion-icon></a>
+    <a href="#about"><ion-icon name="chatbubble-ellipses"></ion-icon></a>
+    <a href="#compsci"><span class="material-symbols-outlined">code_blocks</span></a>
+    <a href="#engn"><span class="material-symbols-outlined">engineering</span></a>
+    <a href="#personal"><span class="material-symbols-outlined">accessibility</span></a>
+    <a href="#contact"><ion-icon name="call"></ion-icon></a>
   </div>
-  
+  <section id="main">
   <div id="title">
     <h2>dh-bear</h2>
-    <img src="/assets/alfred_e_newman.jpg" alt="image could not load">
     <p>the renassiance man</p>
-    <button onclick="toggleBio()">bio</button>
-    <button onclick="toggleNews()">see what's new</button>
-  </div>
-
-  <div id="bio">
-    <p>i am pursuing a double major in computer engineering b.s.
-       and applied-math + computer-science (joint) b.s. </p>
+    <div id="titleSet" onclick="toggleBio()">
+      <img id="alfred" src="/assets/alfred_e_newman.jpg" alt="image could not load">
+      <div id="bio">
+        <p>computer engineering b.s. and applied math-computer science (joint) b.s.</p> 
+      </div>
+    </div>
   </div>
 
   <div id="news">
     <h3>SURPRISING!</h3>
     <p>I have yet to find an internship, despite my awesome personality and schooling</p>
   </div>
+
+  <div id="nextBtnDiv" class="first-page"><button id="scoll-next" onclick="scrollToNext()"><ion-icon name="chevron-down" /></button></div>
+  </section>
+
+  <!-- About me section/page-->
+  <section id="about">
+    <div class="header2">
+      <h2>About</h2>
+    </div>
+    <div class="body2">
+      <h1>Main about me</h1>
+      <p>Love playing guitar and my friends</p>
+      <p>Love to sing in the rain</p>
+      <p>BigGame Of Thrones Fan</p>
+    </div>
+    <div class="sidebar2">
+      <img src="/assets/tux_neuman.jpeg" alt="">
+    </div>
+    <div class="footer2">
+      <h3>Let's get down to Business!</h3>
+      <p>I have three main concentrations:</p>
+      <ul>
+        <li><a href="#">Computer Science</a></li>
+        <li><a href="#">Engineering</a></li>
+        <li><a href="#">Management Consulting</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Compsci section-->
+  <section id="compsci">
+    <div class="header3">
+      <h2>Computer Science</h2>
+    </div>
+    <div class="body3">
+      <h1>Main about me</h1>
+      <p>Love playing guitar and my friends</p>
+      <p>Love to sing in the rain</p>
+      <p>BigGame Of Thrones Fan</p>
+    </div>
+    <div class="sidebar3">
+      <img src="/assets/guitar_neuman.jpeg" alt="">
+    </div>
+    <div class="footer3">
+      <h3>Let's get down to Business!</h3>
+      <p>I have three main concentrations:</p>
+      <ul>
+        <li><a href="#">Computer Science</a></li>
+        <li><a href="#">Engineering</a></li>
+        <li><a href="#">Management Consulting</a></li>
+      </ul>
+    </div>
+  </section>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
