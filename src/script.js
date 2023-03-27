@@ -15,6 +15,7 @@ function toggleNav() {
   }navCounter++;
 }
 
+
 function toggleBio() {
   if (bioCounter % 2 == 0){
     document.getElementById("bio").style.display = "block";
@@ -25,6 +26,7 @@ function toggleBio() {
   }
   bioCounter++;
 }
+
 
 function toggleNews() {
   if (newsCounter % 2 == 0){

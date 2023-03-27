@@ -11,12 +11,13 @@
   <div id="backBtnDiv"><button id="scoll-back" onclick="scrollToPrev()"><ion-icon name="chevron-up"/></button></div>
   <ion-icon name="menu" id="navTog" onclick="toggleNav()"></ion-icon>
   <div id="mySidenav" class="sidenav">
-    <a href="#main"><ion-icon name="home"></ion-icon></a>
-    <a href="#about"><ion-icon name="chatbubble-ellipses"></ion-icon></a>
-    <a href="#compsci"><span class="material-symbols-outlined">code_blocks</span></a>
-    <a href="#engn"><span class="material-symbols-outlined">engineering</span></a>
-    <a href="#personal"><span class="material-symbols-outlined">accessibility</span></a>
-    <a href="#contact"><ion-icon name="call"></ion-icon></a>
+    <a onclick="document.getElementById('main').scrollIntoView({behavior: 'smooth'})"><ion-icon name="home"></ion-icon></a>
+    <a onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})"><ion-icon name="chatbubble-ellipses"></ion-icon></a>
+    <a onclick="document.getElementById('compsci').scrollIntoView({behavior: 'smooth'})"><span class="material-symbols-outlined">code_blocks</span></a>
+    <a onclick="document.getElementById('engn').scrollIntoView({behavior: 'smooth'})"><span class="material-symbols-outlined">engineering</span></a>
+    <a onclick="document.getElementById('business').scrollIntoView({behavior: 'smooth'})"><span class="material-symbols-outlined">engineering</span></a>
+    <a onclick="document.getElementById('personal').scrollIntoView({behavior: 'smooth'})""><span class="material-symbols-outlined">accessibility</span></a>
+    <a onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"><ion-icon name="call"></ion-icon></a>
   </div>
   <section id="main">
   <div id="title">
@@ -53,7 +54,7 @@
       <img src="/assets/tux_neuman.jpeg" alt="">
     </div>
     <div class="footer2">
-      <h3>Let's get down to Business!</h3>
+      <h3>real shit!</h3>
       <p>I have three main concentrations:</p>
       <ul>
         <li><a href="#">Computer Science</a></li>
@@ -84,6 +85,107 @@
         <li><a href="#">Computer Science</a></li>
         <li><a href="#">Engineering</a></li>
         <li><a href="#">Management Consulting</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Compsci section-->
+  <section id="engn">
+    <div class="header4">
+      <h2>Engineering</ion-icon></h2>
+    </div>
+    <div class="body4">
+      <h1>Main about me</h1>
+      <p>Love playing guitar and my friends</p>
+      <p>Love to sing in the rain</p>
+      <p>BigGame Of Thrones Fan</p>
+    </div>
+    <div class="sidebar4">
+      <img src="/assets/cs2.png" alt="">
+    </div>
+    <div class="footer3">
+      <h3>Let's get down to Business!</h3>
+      <p>I have three main concentrations:</p>
+      <ul>
+        <li><a href="#">Computer Science</a></li>
+        <li><a href="#">Engineering</a></li>
+        <li><a href="#">Management Consulting</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Business section-->
+  <section id="business">
+    <div class="header5">
+      <h2>business</h2>
+    </div>
+    <div class="body5">
+      <h1>Main about me</h1>
+      <p>Love playing guitar and my friends</p>
+      <p>Love to sing in the rain</p>
+      <p>BigGame Of Thrones Fan</p>
+    </div>
+    <div class="sidebar3">
+      <img src="/assets/tux_neuman.jpeg" alt="">
+    </div>
+    <div class="footer5">
+      <h3>real shit!</h3>
+      <p>I have three main concentrations:</p>
+      <ul>
+        <li><a href="#">Computer Science</a></li>
+        <li><a href="#">Engineering</a></li>
+        <li><a href="#">Management Consulting</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Personal section-->
+  <section id="personal">
+    <div class="header6">
+      <h2>Personal</ion-icon></h2>
+    </div>
+    <div class="body6">
+      <h1>well, who am i?</h1>
+      <p>love playing guitar and my friends</p>
+      <p>love to eat and make delicious smoothies and paninis</p>
+      <p>big Game Of Thrones Fan</p>
+    </div>
+    <div class="fanbar6">
+      <img src="/assets/guitar_neuman.jpeg" alt="">
+      <img src="/assets/got_neuman.jpeg">
+      <img src="/assets/facebook_neuman.webp" alt="">
+    </div>
+    <div class="footer6">
+      <h3>Let's get down to Business!</h3>
+      <p>I have three main concentrations:</p>
+      <ul>
+        <li><a href="#">Computer Science</a></li>
+        <li><a href="#">Engineering</a></li>
+        <li><a href="#">Management Consulting</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact section-->
+  <section id="contact">
+    <div class="header7">
+      <h2>Contact</h2>
+    </div>
+    <div class="body7">
+      <h1>well, who am i?</h1>
+      <p>love playing guitar and my friends</p>
+      <p>love to eat and make delicious smoothies and paninis</p>
+      <p>big Game Of Thrones Fan</p>
+    </div>
+    <div class="sidebar7">
+      <img src="/assets/prom_headshot.png" alt="">
+    </div>
+    <div class="footer7">
+      <h3>CONTACT INFO</h3>
+      <ul>
+        <li><a href="#">GH</a></li>
+        <li><a href="#">LINKEDIN</a></li>
+        <li><a href="#">EMAIL</a></li>
       </ul>
     </div>
   </section>

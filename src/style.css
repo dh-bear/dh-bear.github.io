@@ -4,8 +4,15 @@
 @import url(/src/css/compsci.css);
 @import url(/src/css/engn.css);
 @import url(/src/css/personal.css);
+@import url(/src/css/business.css);
+@import url(/src/css/contact.css);
 :root{
+    background: url("/assets/topography.svg");
+    background-size: cover;
+    background-color: rgb(100, 70, 70);
+    color: #8f8f8f;
     font-family: 'Delicious Handrawn', cursive;
+    font-family: sans-serif;
     -webkit-touch-callout: none; /* iOS Safari */
           -webkit-user-select: none; /* Safari */
            -khtml-user-select: none; /* Konqueror HTML */
@@ -17,6 +24,7 @@
 
 body{
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 #main{
@@ -67,6 +75,7 @@ body{
     }
 }
 
+
 #bio{
     display: none;
     text-align: center;
@@ -98,8 +107,13 @@ body{
     background-color: transparent;
     border: none;
 }
+
 #nextBtnDiv ion-icon{
-    color: rgb(192, 63, 82);
+    color: rgba(192, 63, 82, 1);
+}
+
+#nextBtnDiv ion-icon:hover{
+    color: wheat;
 }
 
 .first-page button{
@@ -133,6 +147,11 @@ body{
     background-color: transparent;
     border: transparent;
 }
+
 #backBtnDiv ion-icon{
+    color: rgba(192, 63, 82, 0.367);
+}
+
+#backBtnDiv ion-icon:hover{
     color: rgb(192, 63, 82);
 }
