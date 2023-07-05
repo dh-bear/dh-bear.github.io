@@ -4,196 +4,47 @@
 <title>DH BEAR</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/src/style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-<body>
-  <div id="backBtnDiv"><button id="scoll-back" onclick="scrollToPrev()"><ion-icon name="chevron-up"/></button></div>
-  <ion-icon name="menu" id="navTog" onclick="toggleNav()"></ion-icon>
-  <div id="mySidenav" class="sidenav">
-    <a onclick="document.getElementById('main').scrollIntoView({behavior: 'smooth'})"><ion-icon name="home"></ion-icon></a>
-    <a onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})"><ion-icon name="chatbubble-ellipses"></ion-icon></a>
-    <a onclick="document.getElementById('compsci').scrollIntoView({behavior: 'smooth'})"><span class="material-symbols-outlined">code_blocks</span></a>
-    <a onclick="document.getElementById('engn').scrollIntoView({behavior: 'smooth'})"><span class="material-symbols-outlined">engineering</span></a>
-    <a onclick="document.getElementById('business').scrollIntoView({behavior: 'smooth'})"><span class="material-symbols-outlined">engineering</span></a>
-    <a onclick="document.getElementById('personal').scrollIntoView({behavior: 'smooth'})""><span class="material-symbols-outlined">accessibility</span></a>
-    <a onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"><ion-icon name="call"></ion-icon></a>
-  </div>
-  <section id="main">
-  <div id="title">
-    <h2>dh-bear</h2>
-    <p>the renassiance man</p>
-    <div id="titleSet" onclick="toggleBio()">
-      <img id="alfred" src="/assets/alfred_e_newman.jpg" alt="image could not load">
-      <div id="bio">
-        <p>computer engineering b.s. and applied math-computer science (joint) b.s.</p> 
-      </div>
-    </div>
-  </div>
-
-  <div id="news">
-    <h3>SURPRISING!</h3>
-    <p>I have yet to find an internship, despite my awesome personality and schooling</p>
-  </div>
-
-  <div id="nextBtnDiv" class="first-page"><button id="scoll-next" onclick="scrollToNext()"><ion-icon name="chevron-down" /></button></div>
-  </section>
-
-  <!-- About me section/page-->
-  <section id="about">
-    <div class="header2">
-      <h2>About</h2>
-    </div>
-    <div class="body2">
-      <h1>Main about me</h1>
-      <p>Love playing guitar and my friends</p>
-      <p>Love to sing in the rain</p>
-      <p>BigGame Of Thrones Fan</p>
-    </div>
-    <div class="sidebar2">
-      <img src="/assets/tux_neuman.jpeg" alt="">
-    </div>
-    <div class="footer2">
-      <h3>real shit!</h3>
-      <p>I have three main concentrations:</p>
-      <ul>
-        <li><a href="#">Computer Science</a></li>
-        <li><a href="#">Engineering</a></li>
-        <li><a href="#">Management Consulting</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Compsci section-->
-  <section id="compsci">
-    <div class="header3">
-      <h2>Computer Science</h2>
-    </div>
-    <div class="body3">
-      <h1>Main about me</h1>
-      <p>Love playing guitar and my friends</p>
-      <p>Love to sing in the rain</p>
-      <p>BigGame Of Thrones Fan</p>
-    </div>
-    <div class="sidebar3">
-      <img src="/assets/guitar_neuman.jpeg" alt="">
-    </div>
-    <div class="footer3">
-      <h3>Let's get down to Business!</h3>
-      <p>I have three main concentrations:</p>
-      <ul>
-        <li><a href="#">Computer Science</a></li>
-        <li><a href="#">Engineering</a></li>
-        <li><a href="#">Management Consulting</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Compsci section-->
-  <section id="engn">
-    <div class="header4">
-      <h2>Engineering</ion-icon></h2>
-    </div>
-    <div class="body4">
-      <h1>Main about me</h1>
-      <p>Love playing guitar and my friends</p>
-      <p>Love to sing in the rain</p>
-      <p>BigGame Of Thrones Fan</p>
-    </div>
-    <div class="sidebar4">
-      <img src="/assets/cs2.png" alt="">
-    </div>
-    <div class="footer3">
-      <h3>Let's get down to Business!</h3>
-      <p>I have three main concentrations:</p>
-      <ul>
-        <li><a href="#">Computer Science</a></li>
-        <li><a href="#">Engineering</a></li>
-        <li><a href="#">Management Consulting</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Business section-->
-  <section id="business">
-    <div class="header5">
-      <h2>business</h2>
-    </div>
-    <div class="body5">
-      <h1>Main about me</h1>
-      <p>Love playing guitar and my friends</p>
-      <p>Love to sing in the rain</p>
-      <p>BigGame Of Thrones Fan</p>
-    </div>
-    <div class="sidebar3">
-      <img src="/assets/tux_neuman.jpeg" alt="">
-    </div>
-    <div class="footer5">
-      <h3>real shit!</h3>
-      <p>I have three main concentrations:</p>
-      <ul>
-        <li><a href="#">Computer Science</a></li>
-        <li><a href="#">Engineering</a></li>
-        <li><a href="#">Management Consulting</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Personal section-->
-  <section id="personal">
-    <div class="header6">
-      <h2>Personal</ion-icon></h2>
-    </div>
-    <div class="body6">
-      <h1>well, who am i?</h1>
-      <p>love playing guitar and my friends</p>
-      <p>love to eat and make delicious smoothies and paninis</p>
-      <p>big Game Of Thrones Fan</p>
-    </div>
-    <div class="fanbar6">
-      <img src="/assets/guitar_neuman.jpeg" alt="">
-      <img src="/assets/got_neuman.jpeg">
-      <img src="/assets/facebook_neuman.webp" alt="">
-    </div>
-    <div class="footer6">
-      <h3>Let's get down to Business!</h3>
-      <p>I have three main concentrations:</p>
-      <ul>
-        <li><a href="#">Computer Science</a></li>
-        <li><a href="#">Engineering</a></li>
-        <li><a href="#">Management Consulting</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Contact section-->
-  <section id="contact">
-    <div class="header7">
-      <h2>Contact</h2>
-    </div>
-    <div class="body7">
-      <h1>well, who am i?</h1>
-      <p>love playing guitar and my friends</p>
-      <p>love to eat and make delicious smoothies and paninis</p>
-      <p>big Game Of Thrones Fan</p>
-    </div>
-    <div class="sidebar7">
-      <img src="/assets/prom_headshot.png" alt="">
-    </div>
-    <div class="footer7">
-      <h3>CONTACT INFO</h3>
-      <ul>
-        <li><a href="#">GH</a></li>
-        <li><a href="#">LINKEDIN</a></li>
-        <li><a href="#">EMAIL</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="/src/script.js"></script>
-  
+<head>
+  <title>Essay Planner</title>
+  <style>
+  button {
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  }
+  </style>
+  </head>
+  <body>
+  <form>
+  <label for="topic"> What is the topic?</label><br>
+  <input type="text" id="topic" name="topic"><br>
+  <label for="class">What class is this for?</label><br>
+  <input type="text" id="class" name="class"><br>
+  <label for="essayType">Essay Type:</label><br>
+  <input type= "text" id= "essay Type" name="essay Type"><br>
+  <label for="refMaterialType">Reference Material Type:</label><br>
+  <input type="radio" id="article" name="refMaterialType" value="Article">
+  <label for="article">Article</label><br>
+  <input type="radio" id="book" name="refMaterialType" value="Book">
+  <label for="book">Book</label><br>
+  <input type="radio" id="none" name="refMaterialType" value="None">
+  <label for="none">None</label><br>
+  <label for="bookTitle">Book Title:</label><br>
+  <input type="text" id="bookTitle" name="bookTitle"><br>
+  <label for="articleText">Article Text:</label><br>
+  <textarea id="articleText" name="articleText"></textarea><br>
+  <button id="thesisButton" type="button" onclick="">Generate Main Thesis</button><br>
+  <button type="button" onclick=''>Generate Key Ideas</button><br>
+  <button type="button" onclick=''>Generate Outline</button><br>
+  </form>
+  <script src="app.js"></script>
 </body>
 </html>
 
