@@ -7,44 +7,140 @@
 <head>
   <title>Essay Planner</title>
   <style>
+  body{
+    display: flex;
+    flex-direction: row;
+    background-color: wheat;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh; /* Full height */
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+    border-radius: 1em;
+    box-sizing: border-box; /* Optional for better box size calculation */
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  div .question {
+    width: 200px; 
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  }
+
   button {
-  background-color: purple;
-  color: white;
-  border: none;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .question{
+    background-color: whitesmoke;
+    margin: 10px 10px;
+    padding: 10px 10px;
+  }
+  #referenceType > div{
+    color: gray;
+    text-align: left;
+    /*text-indent: 25%;*/
+    font-size: 75%;
   }
   </style>
   </head>
   <body>
-  <form>
-  <label for="topic"> What is the topic?</label><br>
-  <input type="text" id="topic" name="topic"><br>
-  <label for="class">What class is this for?</label><br>
-  <input type="text" id="class" name="class"><br>
-  <label for="essayType">Essay Type:</label><br>
-  <input type= "text" id= "essay Type" name="essay Type"><br>
-  <label for="refMaterialType">Reference Material Type:</label><br>
-  <input type="radio" id="article" name="refMaterialType" value="Article">
-  <label for="article">Article</label><br>
-  <input type="radio" id="book" name="refMaterialType" value="Book">
-  <label for="book">Book</label><br>
-  <input type="radio" id="none" name="refMaterialType" value="None">
-  <label for="none">None</label><br>
-  <label for="bookTitle">Book Title:</label><br>
-  <input type="text" id="bookTitle" name="bookTitle"><br>
-  <label for="articleText">Article Text:</label><br>
-  <textarea id="articleText" name="articleText"></textarea><br>
-  <button id="thesisButton" type="button" onclick="">Generate Main Thesis</button><br>
-  <button type="button" onclick=''>Generate Key Ideas</button><br>
-  <button type="button" onclick=''>Generate Outline</button><br>
-  </form>
-  <script src="app.js"></script>
-</body>
+    <section>
+    <form id="myForm">
+        <div id="topic" class="question">
+            <p>What is the topic?</p>
+            <input type="text" id="response1" required>
+            <!--<button type="submit">Submit</button>-->
+          </div>
+
+        <div id="school_class" class="question">
+            <p>What class is this for?</p>
+            <input type="text" id="response2" required>
+            <!--<button type="submit">Submit</button>-->
+          </div>
+
+        <div id="additional" class="question">
+            <p>Special Instructions</p>
+            <input type="text" id="response3" required>
+            <!--<button type="submit">Submit</button>-->
+          </div>
+
+        <div id="essayType" class="question">
+            <p>Essay Type</p>
+            <select id="essay_dropdown" required>
+              <option value="" disabled selected>--Select an option--</option>
+              <option value="option1">Narrative</option>
+              <option value="option2">Persuasive</option>
+              <option value="option3">Expository</option>
+              <option value="option4">Compare & Contrast</option>
+              <option value="option5">Character Analysis</option>
+              <option value="option6">Theme Analysis</option>
+              <option value="option7">Literary Criticism</option>
+              <option value="option8">Poetry Analysis</option>
+              <option value="option9">Dramatic Analysis</option>
+            </select>
+            <!--<button type="submit">Submit</button>-->
+        </div>
+
+        <div id="referenceType" class="question">
+          <p>Reference Material Type</p>
+          <div>
+            <input type="radio" id="noneNeeded" name="radio" value="option1" required>
+            <label for="noneNeeded">None (Skip)</label>
+          </div>
+          <div>
+            <input type = "radio" id="nameRef" name="radio" value="option4">
+            <label for="nameRef">Name of Writing Piece</label>
+            <select id="dropdownName">
+              <option value="option1">Book</option>
+              <option value="option2">Article</option>
+            </select>
+            <input type="text" id="pieceName">
+          </div>
+          <div>
+            <input type="radio" id="scanImage" name="radio" value="option3">
+            <label for="scanImage">Image of text</label>
+          </div>
+        </div>
+
+        <button type="submit" id="submitAll">Submit & Generate Thesis</button>
+
+        <pre id="result"></pre>
+    </form>
+  </section>
+  <section>
+    <div class="question">
+        <p><b>We've generated you a thesis</b></p>
+        <input type="text" id="thesisText" name="thesisText">
+    </div>
+    <div class="question">
+        <p><b>We've generated you a few key points</b></p>
+        <input type="text" id="keypointsText" name="keypointsText">
+    </div>
+    <div class="question">
+        <p><b>We've generated you the outline</b></p>
+        <input type="text" id="outlineText" name="outlineText">
+    </div>
+  </section>
+    <script src="script.js"></script>
+  </body>
 </html>
 
