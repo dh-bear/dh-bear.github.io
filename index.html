@@ -64,7 +64,7 @@
   </head>
   <body>
     <section>
-    <form id="myForm">
+    <div id="myForm">
         <div id="topic" class="question">
             <p>What is the topic?</p>
             <input type="text" id="response1" required>
@@ -124,20 +124,20 @@
         <button type="submit" id="submitAll">Submit & Generate Thesis</button>
 
         <pre id="result"></pre>
-    </form>
+      </div>
   </section>
   <section>
     <div class="question">
         <p><b>We've generated you a thesis</b></p>
-        <input type="text" id="thesisText" name="thesisText">
+        <p id="thesisText"></p>
     </div>
     <div class="question">
         <p><b>We've generated you a few key points</b></p>
-        <input type="text" id="keypointsText" name="keypointsText">
+        <p id="keyPointsText"></p>
     </div>
     <div class="question">
         <p><b>We've generated you the outline</b></p>
-        <input type="text" id="outlineText" name="outlineText">
+        <p id="outlineText"></p>
     </div>
   </section>
     <script src="script.js"></script>

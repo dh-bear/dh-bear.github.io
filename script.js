@@ -30,14 +30,13 @@ document.getElementById("myForm").addEventListener("submit", function(e){
             }
         }
     }
-    document.getElementById("result").innerText = JSON.stringify(responses, null, 2);
-    
     generateThesis(responses);
     
 });
 
 function generateThesis(responses_data){
-    fetch('https://api.retool.com/v1/workflows/101cbbd7-5263-49e9-80b7-c880befa97dc/startTrigger?workflowApiKey=retool_wk_016aa612d4594d8e9db2f70ed39eb23a', {
+    document.getElementById("result").innerText = JSON.stringify(responses_data, null, 2);
+    /*fetch('https://api.retool.com/v1/workflows/101cbbd7-5263-49e9-80b7-c880befa97dc/startTrigger?workflowApiKey=retool_wk_016aa612d4594d8e9db2f70ed39eb23a', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -47,7 +46,7 @@ function generateThesis(responses_data){
     .then((response) => response.json())
     .then((data) => {
         console.log('Success:', data);
-        const thesisOutput = data.thesis; // Replace 'thesis' with an actual key if 'thesis' output is direct.
+        const thesisOutput = data.thesis_js; // Replace 'thesis' with an actual key if 'thesis' output is direct.
   
     // you can now use thesisOutput in your website. For example:
     document.getElementById('thesisText').textContent = thesisOutput;
@@ -55,15 +54,5 @@ function generateThesis(responses_data){
     
     .catch((error) => {
         console.error('Error:', error);
-    });
+    });*/
 }
-
-
-
-
-
-
-function redirectMe() {
-    window.location.replace("generated_content.html");
-    return false;
-  }
