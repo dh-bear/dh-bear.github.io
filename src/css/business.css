@@ -1,0 +1,57 @@
+#business {
+    scroll-snap-align: start;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    background: inherit;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /*5 col*/
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; /*5 row*/
+    grid-gap: 10px;
+    text-align: center;
+    overflow-y: hidden;
+
+}
+
+
+.header5{
+    font-size: 3em;
+    grid-column: 2/6;
+    grid-row: 1/2;
+    background-color: none;
+    margin-right: 3vw;
+    text-align: center;
+}
+
+.body5{
+    grid-column: 2/4;
+    grid-row: 2/2;
+    background-color: none;
+    text-align: left;
+
+}
+
+.sidebar5{
+    grid-column: 4/6;
+    grid-row: 2/2;
+    background-color: none;
+    margin-right: 3vw;
+}
+.sidebar5 img{
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.footer5{
+    grid-column: 2/6;
+    grid-row: 3/3;
+    background-color: none;
+    margin-right: 3vw;
+}
+
+.footer5 ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-self: center;
+}

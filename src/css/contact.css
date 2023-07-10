@@ -1,0 +1,65 @@
+#contact {
+    scroll-snap-align: start;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    background: inherit;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /*5 col*/
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; /*5 row*/
+    grid-gap: 10px;
+    text-align: center;
+    overflow-y: hidden;
+}
+
+
+.header7{
+    font-size: 3em;
+    grid-column: 2/6;
+    grid-row: 1/2;
+    background-color: none;
+    margin-right: 3vw;
+}
+
+.body7{
+    grid-column: 2/4;
+    grid-row: 2/2;
+    background-color: none;
+}
+
+.sidebar7{
+    grid-column: 4/6;
+    grid-row: 2/2;
+    background-color: none;
+    margin-right: 3vw;
+}
+.sidebar7 img{
+    width: 80%;
+    max-height: 90%;
+}
+
+.footer7{
+    grid-column: 2/6;
+    grid-row: 3/3;
+    background-color: none;
+    margin-right: 3vw;
+}
+
+.footer7 ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-self: center;
+}
+
+.footer7 ul li a{
+    text-decoration: underline;
+    color: inherit;
+}
+
+.footer7 ul li a:hover{
+    text-decoration: underline ;
+    text-decoration-color: rgb(192, 36, 68);
+    font-weight: bolder;
+    color: inherit;
+}
