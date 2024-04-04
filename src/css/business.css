@@ -9,6 +9,7 @@
     grid-gap: 10px;
     text-align: center;
     overflow-y: hidden;
+    color: whitesmoke;
 
 }
 
@@ -20,6 +21,8 @@
     background-color: none;
     margin-right: 3vw;
     text-align: center;
+    color:#333333;
+
 }
 
 .body5{

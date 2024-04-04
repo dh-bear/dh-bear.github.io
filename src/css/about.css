@@ -9,6 +9,7 @@
     grid-gap: 10px;
     text-align: center;
     overflow-y: hidden;
+    color: whitesmoke;
 }
 
 
@@ -18,18 +19,17 @@
     grid-row: 1/2;
     background-color: none;
     margin-right: 3vw;
+    color:#333333;
 }
 
 .body2{
     grid-column: 2/4;
     grid-row: 2/2;
-    background-color: none;
 }
 
 .sidebar2{
     grid-column: 4/6;
     grid-row: 2/2;
-    background-color: none;
     margin-right: 3vw;
 }
 .sidebar2 img{
@@ -40,7 +40,6 @@
 .footer2{
     grid-column: 2/6;
     grid-row: 3/3;
-    background-color: none;
     margin-right: 3vw;
     text-align: left;
 }

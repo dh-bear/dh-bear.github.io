@@ -8,10 +8,11 @@
 @import url(/src/css/contact.css);
 
 :root{
-    /*background: url("/assets/topography.svg");
+    background: url("/assets/bofax.jpg");
     background-size: cover;
-    background-color: rgb(100, 70, 70);*/
-    background-color: wheat;
+    background-attachment: fixed;
+    /* background-color: rgb(100, 70, 70); */
+    /* background-color: wheat; */
     color: #8f8f8f;
     color:#333333;
     font-family: 'Delicious Handrawn', cursive;
