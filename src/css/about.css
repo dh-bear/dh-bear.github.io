@@ -7,7 +7,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /*5 col*/
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; /*5 row*/
     grid-gap: 10px;
-    text-align: center;
+    text-align: left;
     overflow-y: hidden;
     color: whitesmoke;
 }
@@ -27,6 +27,9 @@
     grid-row: 2/2;
 }
 
+.body2 ul li{
+    margin-bottom: 20px;
+}
 .sidebar2{
     grid-column: 4/6;
     grid-row: 2/2;

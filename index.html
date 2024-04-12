@@ -14,16 +14,16 @@
     <a onclick="document.getElementById('main').scrollIntoView({behavior: 'smooth'})"><ion-icon name="home"></ion-icon> home</a>
     <a onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})"><ion-icon name="chatbubble-ellipses"></ion-icon> about</a>
     <a onclick="document.getElementById('compsci').scrollIntoView({behavior: 'smooth'})"><span class="material-symbols-outlined">code_blocks</span> comp sci</a>
-    <a onclick="document.getElementById('engn').scrollIntoView({behavior: 'smooth'})"><span class="material-symbols-outlined">engineering</span> engn</a>
-    <a onclick="document.getElementById('business').scrollIntoView({behavior: 'smooth'})"><span class="material-symbols-outlined">engineering</span> business</a>
-    <a onclick="document.getElementById('personal').scrollIntoView({behavior: 'smooth'})""><span class="material-symbols-outlined">accessibility</span> personal</a>
+    <a onclick="document.getElementById('math').scrollIntoView({behavior: 'smooth'})"><span class="material-symbols-outlined">finance</span> math</a>
+    <a onclick="document.getElementById('business').scrollIntoView({behavior: 'smooth'})"><span class="material-symbols-outlined">money</span> finance</a>
+    <a onclick="document.getElementById('personal').scrollIntoView({behavior: 'smooth'})"><span class="material-symbols-outlined">accessibility</span> personal</a>
     <a onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"><ion-icon name="call"></ion-icon> contact</a>
   </div>
   <section id="main">
   <div id="title">
     <h2>dh-bear</h2>
-    <p>the renassiance man</p>
-    <div id="titleSet" onclick="toggleBio()">
+    <!-- <div id="titleSet" onclick="toggleBio()"> -->
+    <div id="titleSet">
       <img id="alfred" src="/assets/alfred_e_newman.jpg" alt="image could not load">
       <div id="bio">
         <p>computer engineering b.s. and applied math-computer science (joint) b.s.</p> 
@@ -33,7 +33,11 @@
   </div>
 
   <div id="news">
-    <h3 onclick="toggleBio()" style="text-shadow: 2px 2px 2px rgb(192, 32, 83);">Click Me!</h3>
+    <!-- <h3 onclick="toggleBio()" style="text-shadow: 2px 2px 2px rgb(192, 32, 83);">Click Me!</h3> -->
+    <h3 style="color: whitesmoke; text-shadow: 2px 2px 2px #313131;">
+      <p>applied math-computer science (b.s.)</p>
+      <p>business economics (b.a.)</p>
+    </h3>
     <!--<p>I have yet to find an internship, despite my awesome personality and schooling</p>-->
   </div>
 
@@ -46,21 +50,24 @@
       <h2>About</h2>
     </div>
     <div class="body2">
-      <h1>Main about me</h1>
-      <p>Love playing guitar and my friends</p>
-      <p>Love to sing in the rain</p>
-      <p>BigGame Of Thrones Fan</p>
+      <h1>Hi, my name is Daniel Hadar.</h1>
+      <ul>
+        <li>I’m a sophomore at Brown from San Francisco.</li>
+        <li>I study Computer Science and Applied Math because it’s intellectually challenging and equips me with a good analytical foundation.</li>
+        <li>I’m also a Division 1 student-athlete on the Water Polo team, and played at the highest levels throughout my youth.</li>
+        <li>I selected Brown in large part due to the open curriculum, wanting to bridge together interests in rigorous technical fields and add an edge by truly understanding something beyond the numbers.</li>
+      </ul>
     </div>
     <div class="sidebar2">
-      <img src="/assets/tux_neuman.jpeg" alt="">
+      <img src="/assets/showtime_square.png" alt="">
     </div>
     <div class="footer2">
-      <h3>real shit!</h3>
-      <p>I have three main concentrations:</p>
+      <h3>Career</h3>
+      <p>I have three main career paths:</p>
       <ul>
-        <li><a href="#">Computer Science</a></li>
-        <li><a href="#">Engineering</a></li>
-        <li><a href="#">Management Consulting</a></li>
+        <li><a href="#business">Investment Banking</a></li>
+        <li><a href="#">Machine Learning Engineer</a></li>
+        <li><a href="#business">Portfolio Management</a></li>
       </ul>
     </div>
   </section>
@@ -71,10 +78,28 @@
       <h2>Computer Science</h2>
     </div>
     <div class="body3">
-      <h1>Main about me</h1>
-      <p>Love playing guitar and my friends</p>
-      <p>Love to sing in the rain</p>
-      <p>BigGame Of Thrones Fan</p>
+      <h1>AI / Machine Learning</h1>
+      <ul>
+        <li>Deep Learning</li>
+        <li>Machine Learning <i style="color: black;">*future</i></li>
+        <li>Intro to Robotics: Drones <i style="color: black;">*future</i></li>
+      </ul>
+      <h1>Systems</h1>
+      <ul>
+        <li>Intro to Computer Systems</li>
+        <li>Intro to Software Engineering</li>
+      </ul>
+      <h1>General</h1>
+      <ul>
+        <li>Data Structures and Algorithms</li>
+        <li>Object-Oriented Programming</li>
+        <li>Discrete Logic and Probability</li>
+      </ul>
+      <h1>Software/Product/Prompt Engineer at StuddyAI</h1>
+      <ul>
+        <li>Full-stack development</li>
+        <li>LLM Integration</li>
+      </ul>
     </div>
     <div class="sidebar3">
       <img src="/assets/guitar_neuman.jpeg" alt="">
@@ -90,15 +115,28 @@
   </section>
 
   <!-- Compsci section-->
-  <section id="engn">
+  <section id="math">
     <div class="header4">
-      <h2>Engineering</ion-icon></h2>
+      <h2>Applied Mathematics</ion-icon></h2>
     </div>
     <div class="body4">
-      <h1>Main about me</h1>
-      <p>Love playing guitar and my friends</p>
-      <p>Love to sing in the rain</p>
-      <p>BigGame Of Thrones Fan</p>
+      <h1>Operations Research</h1>
+      <ul>
+        <li>Operations Research: Determinstic Models</li>
+        <li>Operations Research: Probabilistic Models</li>
+      </ul>
+      <h1>Probability and Statistics</h1>
+      <ul>
+        <li>Monte Carlo Simulation with Applications to Finance</li>
+        <li>Operations Research: Probabilistic Models</li>
+        <li>Statistical Inference I</li>
+      </ul>
+      <h1>General</h1>
+      <ul>
+        <li>Ordinary Differential Equations</li>
+        <li>Linear Algebra</li>
+        <li>Multivariable Calculus for Physics/Engineering</li>
+      </ul>
     </div>
     <div class="sidebar4">
       <img src="/assets/cs1.png" alt="">

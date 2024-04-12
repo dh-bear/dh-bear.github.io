@@ -1,4 +1,4 @@
-#engn {
+#math {
     scroll-snap-align: start;
     display: grid;
     width: 100vw;
@@ -7,7 +7,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /*5 col*/
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; /*5 row*/
     grid-gap: 10px;
-    text-align: center;
+    text-align: left;
     overflow-y: hidden;
     color: whitesmoke;
 
