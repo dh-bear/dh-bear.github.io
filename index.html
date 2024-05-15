@@ -1,213 +1,267 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>DH BEAR</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/src/style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-<body>
-  <div id="backBtnDiv"><button id="scoll-back" onclick="scrollToPrev()"><ion-icon name="chevron-up"/></button></div>
-  <ion-icon name="menu" id="navTog" onclick="toggleNav()"></ion-icon>
-  <div id="mySidenav" class="sidenav">
-    <a onclick="document.getElementById('main').scrollIntoView({behavior: 'smooth'})"><ion-icon name="home"></ion-icon> home</a>
-    <a onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})"><ion-icon name="chatbubble-ellipses"></ion-icon> about</a>
-    <a onclick="document.getElementById('compsci').scrollIntoView({behavior: 'smooth'})"><span class="material-symbols-outlined">code_blocks</span> comp sci</a>
-    <a onclick="document.getElementById('math').scrollIntoView({behavior: 'smooth'})"><span class="material-symbols-outlined">finance</span> math</a>
-    <a onclick="document.getElementById('business').scrollIntoView({behavior: 'smooth'})"><span class="material-symbols-outlined">money</span> finance</a>
-    <a onclick="document.getElementById('personal').scrollIntoView({behavior: 'smooth'})"><span class="material-symbols-outlined">accessibility</span> personal</a>
-    <a onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"><ion-icon name="call"></ion-icon> contact</a>
-  </div>
-  <section id="main">
-  <div id="title">
-    <h2>dh-bear</h2>
-    <!-- <div id="titleSet" onclick="toggleBio()"> -->
-    <div id="titleSet">
-      <img id="alfred" src="/assets/alfred_e_newman.jpg" alt="image could not load">
-      <div id="bio">
-        <p>computer engineering b.s. and applied math-computer science (joint) b.s.</p> 
-        <img src="/assets/Brown_School-of-Engineering_Primary_Hz.png">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="/css/main.min.css"
+      rel="stylesheet"
+    />
+    <title>Daniel Hadar's Portofolio</title>
+    <style>
+      :root{
+        background-image: url(/assets_2/bofax.jpg);
+        /* background-image: url(/assets_2/pattern.svg); */
+        background-attachment:fixed;
+      }
+      section {
+        padding: 50px 0;
+      }
+      #homebutton {
+        color: rgb(136, 0, 255);
+      }
+      .text-muted {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!--navbar-->
+    <nav  class="navbar fixed-top navbar-expand-md  bg-white" style="background-color: rgba(210, 29, 29, 0.171);">
+      <div class="container-xxl" style="background-color: rgba(255, 255, 255, 0.171);">
+        <a href="#intro" class="navbar-brand d-flex align-items-center mr-2">
+          <span  id ="homebutton" class="fw-bold text-indigo fs-2"> &lt;dh-bear/&gt; </span>
+        </a>
+        <!--toggle button for mobile navbar-->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-nav"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--navbar links-->
+        <div
+          class="collapse navbar-collapse bg-white justify-content-end align-center"
+          id="main-nav" >
+          <ul id = "nav-items" class="navbar-nav fs-4">
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutme">about me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">coursework</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#organization">organizations</a>
+            </li>
+            <li class="nav-item dropdown d-none ms-2 d-md-inline ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                contact
+              </a>
+              <ul class="dropdown-menu pull-right dropdown-menu-white mr-5" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item" href="mailto:daniel_hadaro@brown.edu">email</a></li>
+                <li><a class="dropdown-item" href="https://www.linkedin.com/in/daniel-hadar/" target="_blank">linkedin</a></li>
+                <li><a class="dropdown-item" href="https://github.com/dh-bear" target="_blank">github</a></li>
+                <!-- <li><a class="dropdown-item" href="https://calendar.app.google/YPj7SXGUSCRt1DDK8" target="_blank">TODO PERSONALIZE schedule a meeting</a></li>
+                <li><a class="dropdown-item" href="https://forms.gle/MCpCbTDZBHMUQ5uA7" target="_blank">TODO PERSONALIZE inquiry form</a></li> -->
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </div>
+    </nav>
+    <!--profile image and intro text -->
+    <section id="intro">
+      <div class="container-lg">
+        <div class="row justify-content-between align-items-center sm-justify-content-center mb-5  mt-5">
+          <div class="col-md-6  text-center text-md-start .d-inline-block ">
+            <h1>
+              <div id = "name" class="display-3 fw-bold " style="color:rgb(0, 0, 0)">Hi,i'm Daniel</div>
+            </h1>
+            <p id = "profileText"class="white my-4 text-muted">
+              I’m a sophomore at Brown from San Francisco.
+              I study Computer Science and Applied Math because it’s intellectually challenging and equips me with a good analytical foundation.
+              I’m also a Division 1 student-athlete on the Water Polo team, and played at the highest levels throughout my youth.
+              I selected Brown in large part due to the open curriculum, wanting to bridge together interests in rigorous technical fields and add an edge by truly understanding something beyond the numbers.
+              <br><br>
+              This website <!-- This website, which I designed and coded from scratch,--> contains information about me, my
+              projects, my organizations, and contact information.
+            </p>
+          </div>
+          <div id = "profileImage" class="col-md-4 text-center md-block ml-1 col-sm-12">
+            <img src="/assets_2/showtime_square.png" style="width: 575px; height: 575px"/>
+            <!-- <dotlottie-player
+            id="background-photo"
+              class="img-fluid "
+              src="/assets/Wilson.json"
+              background="transparent"
+              speed="1"
+              style="width: 575px; height: 575px"
+              loop = "true"
+              autoplay
+            > </dotlottie-player> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--About Me Section-->
+    <section id="aboutme" class ="bg-white mt-5 ">
+          <div class="container-lg">
+            <div class="row justify-content-between align-items-center sm-justify-content-center ">
+              <div class="col-md-6  text-center md-block">
+                <img class="img-fluid" src="/assets_2/sf.jpeg" style="width: 575px; ">
+                <!-- <dotlottie-player
+                  class="img-fluid"
+                  id="manFloating"
+                  src="/assets/Rb6Upd71yc.json"
+                  background="transparent"
+                  speed="1"
+                  style="width: 675px; height: 675px"
+                  loop = "true"
+                  autoplay
+                ></dotlottie-player> -->
+              </div>
+              <div class="col-md-6 text-center text-md-end mt-5">
+                <h2>
+                  <div id = "about me" class="display-3 fw-bold">about me</div>
+                </h2>
+                <p id = "aboutMeParagraph" style="color:black">
+                  I grew up in California after my parents immigrated from Israel. My fascination with technology began early on
+                  when I followed my grandpa around his job as a Coca-Cola fountain mechanic and further developed
+                  through various engineering, robotics, and computer science programs
+                  in highschool. Through these programs I've gained valuable insight
+                  into these fields.
+                  <br></br>I am most comfortable with Python, Java, Python, TensorFlow, NumPy, HTML, CSS, MATLAB, and React.js. Using
+                  these tech stacks, I have built websites, complex neural networks, and helped solved real world problems in the EdTech space.
+                  Visit my LinkedIn for further info and/or to connect.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section id="projects" class="container-lg">
+      <div class="row mb-5 mt-5">
+        <div>
+          <h3>
+            <div id = "projects" class="display-3 fw-bold">courses i've taken</div>
+          </h3>
+        </div>
+        <div class="col-md-4">
+          <br></br>
+          <p style="font-weight: bold">Applied Mathematics</p>
+          <ul class="text-muted lead" style="list-style:none">
+            <li>Monte Carlo Simulation with Applications to Finance</li>
+            <br>
+            <li>Operations Research: Probabilistic Models</li>
+            <br>
+            <li>Operations Research: Deterministic Models</li>
+            <br>
+            <li>Statistical Inference</li>
+            <br>
+            <li>Applied Ordinary Differential Equations</li>
+            <br>
+            <li>Multivariable Calculus for Physics/Engineering</li>
+            <br>
+            <li>Linear Algebra</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <br></br>
+          <p style="font-weight: bold">Computer Science</p>
+          <ul class="text-muted lead" style="list-style:none;">
+            <li>Deep Learning</li>
+            <br>
+            <li>Data Structures and Algorithms</li>
+            <br>
+            <li>Object-Oriented Programming</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <br></br>
+          <p style="font-weight: bold">Business/Finance</p>
+          <ul class="text-muted lead" style="list-style:none">
+            <li>The Global Sports Industry</li>
+            <br>
+            <li>Intro to Business Management & Decision Making</li>
+            <br>
+            <li>Financial Accounting</li>
+            <br>
+            <li>Financial Statement and Valuation Modeling (Certification)</li>
+          </ul>
+        </div>
+        <!-- <div class="col-md-3">
+          <br></br>
 
-  <div id="news">
-    <!-- <h3 onclick="toggleBio()" style="text-shadow: 2px 2px 2px rgb(192, 32, 83);">Click Me!</h3> -->
-    <h3 style="color: whitesmoke; text-shadow: 2px 2px 2px #313131;">
-      <p>applied math-computer science (b.s.)</p>
-      <p>business economics (b.a.)</p>
-    </h3>
-    <!--<p>I have yet to find an internship, despite my awesome personality and schooling</p>-->
-  </div>
+        </div> -->
+      </div>
+    </section>
+    
+    <!--organizations-->
+    <section id="organization" class="bg-white">
+      <div class = "container-lg ">
+        <div id = "OrganizationRow"class="row-1 justify-content-center sm-justify-content-center mb-5 mt-5">
+          <h4>
+            <div class="display-3 text-center fw-bold">organizations i'm a part of</div>
+          </h4>
+        </div>
+        <div class="row mb-2 m-1 align-items-center">
+        <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+            <a class="thumbnail" href="https://www.brown.edu/undergraduate-programs/applied-mathematics-computer-science-scb" target="_blank">
+              <img class="img-fluid" src="/assets_2/Math.png" alt="">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+            <a class="thumbnail" href="https://www.brown.edu/undergraduate-programs/applied-mathematics-computer-science-scb" target="_blank">
+                <img class="img-fluid" src="/assets_2/BrownCSLogo.png" alt="">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+            <a class="thumbnail" href="https://ycombinator.com/" target="_blank">
+              <img class="img-fluid" src="/assets_2/ycombinator.png" alt="">
+            </a>
+        </div>
+        
+        
+        </div>
+        <div class="row align-items-center" >
+        <div class="col-lg-4 col-md-4 col-xs-4 thumb" target="_blank">
+            <a class="thumbnail" href="https://browninvestmentgroup.co">
+                <img class="img-fluid" src="/assets_2/BIG.png" alt="">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+            <a class="thumbnail" href="https://scholarsoffinance.org/" target="_blank">
+              <img class="img-fluid" src="/assets_2/SOF.png" alt="">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+            <a class="thumbnail" href="https://www.betterworldxdesign.com/" target="_blank">
+              <img class="img-fluid" src="/assets_2/NCAA_DI.png" alt="">
+            </a>
+        </div>
+      </div>
+      <!-- <div class="row align-items-center align-self: center" >
+        <div class="col-lg-4 col-md-4 col-xs-4 thumb">
+          <a class="thumbnail align-self-center" href="https://www.edgeconsortium.org/" target="_blank">
+              <img id="edgeLogo" class="img-fluid" src="/assets/edge.png" alt="">
+          </a> -->
+      </div>
+      </div>
 
-  <div id="nextBtnDiv" class="first-page"><button id="scoll-next" onclick="scrollToNext()"><ion-icon name="chevron-down" /></button></div>
-  </section>
-
-  <!-- About me section/page-->
-  <section id="about">
-    <div class="header2">
-      <h2>About</h2>
-    </div>
-    <div class="body2">
-      <h1>Hi, my name is Daniel Hadar.</h1>
-      <ul>
-        <li>I’m a sophomore at Brown from San Francisco.</li>
-        <li>I study Computer Science and Applied Math because it’s intellectually challenging and equips me with a good analytical foundation.</li>
-        <li>I’m also a Division 1 student-athlete on the Water Polo team, and played at the highest levels throughout my youth.</li>
-        <li>I selected Brown in large part due to the open curriculum, wanting to bridge together interests in rigorous technical fields and add an edge by truly understanding something beyond the numbers.</li>
-      </ul>
-    </div>
-    <div class="sidebar2">
-      <img src="/assets/showtime_square.png" alt="">
-    </div>
-    <div class="footer2">
-      <h3>Career</h3>
-      <p>I have three main career paths:</p>
-      <ul>
-        <li><a href="#business">Investment Banking</a></li>
-        <li><a href="#">Machine Learning Engineer</a></li>
-        <li><a href="#business">Portfolio Management</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Compsci section-->
-  <section id="compsci">
-    <div class="header3">
-      <h2>Computer Science</h2>
-    </div>
-    <div class="body3">
-      <h1>AI / Machine Learning</h1>
-      <ul>
-        <li>Deep Learning</li>
-        <li>Machine Learning <i style="color: black;">*future</i></li>
-        <li>Intro to Robotics: Drones <i style="color: black;">*future</i></li>
-      </ul>
-      <h1>Systems</h1>
-      <ul>
-        <li>Intro to Computer Systems</li>
-        <li>Intro to Software Engineering</li>
-      </ul>
-      <h1>General</h1>
-      <ul>
-        <li>Data Structures and Algorithms</li>
-        <li>Object-Oriented Programming</li>
-        <li>Discrete Logic and Probability</li>
-      </ul>
-      <h1>Software/Product/Prompt Engineer at StuddyAI</h1>
-      <ul>
-        <li>Full-stack development</li>
-        <li>LLM Integration</li>
-      </ul>
-    </div>
-    <div class="sidebar3">
-      <img src="/assets/guitar_neuman.jpeg" alt="">
-    </div>
-    <div class="footer3">
-      <h4>Skills</h4>
-      <img src="/assets/svgs/java.svg" alt="java">
-      <img src="/assets/svgs/python.svg" alt="python">
-      <img src="/assets/svgs/css-3.svg" alt="css">
-      <img src="/assets/svgs/javascript.svg" alt="javascript">
-      <img src="/assets/svgs/html-5.svg" alt="html">
-    </div>
-  </section>
-
-  <!-- Compsci section-->
-  <section id="math">
-    <div class="header4">
-      <h2>Applied Mathematics</ion-icon></h2>
-    </div>
-    <div class="body4">
-      <h1>Operations Research</h1>
-      <ul>
-        <li>Operations Research: Determinstic Models</li>
-        <li>Operations Research: Probabilistic Models</li>
-      </ul>
-      <h1>Probability and Statistics</h1>
-      <ul>
-        <li>Monte Carlo Simulation with Applications to Finance</li>
-        <li>Operations Research: Probabilistic Models</li>
-        <li>Statistical Inference I</li>
-      </ul>
-      <h1>General</h1>
-      <ul>
-        <li>Ordinary Differential Equations</li>
-        <li>Linear Algebra</li>
-        <li>Multivariable Calculus for Physics/Engineering</li>
-      </ul>
-    </div>
-    <div class="sidebar4">
-      <img src="/assets/cs1.png" alt="">
-    </div>
-    <div class="footer4">
-      <h4>Skills</h4>
-      <img src="/assets/svgs/file-type-matlab.svg" alt="">
-    </div>
-  </section>
-
-  <!-- Business section-->
-  <section id="business">
-    <div class="header5">
-      <h2>business</h2>
-    </div>
-    <div class="body5">
-      <h1>key points</h1>
-      <p>i am a technical thinker, with respect to my background, 
-        however outside the box and creative</p>
-      <p>searching for prospects in management consulting and private equity</p>
-    </div>
-    <div class="sidebar5">
-      <img src="/assets/tux_neuman.jpeg" alt="">
-    </div>
-  </section>
-
-  <!-- Personal section-->
-  <section id="personal">
-    <div class="header6">
-      <h2>Personal</ion-icon></h2>
-    </div>
-    <div class="body6">
-      <h1>well, who am i?</h1>
-      <p>love playing guitar and my friends</p>
-      <p>love to eat and make delicious smoothies and paninis</p>
-      <p>big Game Of Thrones Fan</p>
-    </div>
-    <div class="fanbar6">
-      <img src="/assets/guitar_neuman.jpeg" alt="">
-      <img src="/assets/got_neuman.jpeg">
-    </div>
-  </section>
-
-  <!-- Contact section-->
-  <section id="contact">
-    <div class="header7">
-      <h2>Contact</h2>
-    </div>
-    <div class="body7">
-      <h1>well, who am i?</h1>
-      <p>love playing guitar and my friends</p>
-      <p>love to eat and make delicious smoothies and paninis</p>
-      <p>big Game Of Thrones Fan</p>
-    </div>
-    <div class="sidebar7">
-      <img src="/assets/showtime.jpeg" alt="">
-    </div>
-    <div class="footer7">
-      <h3>CONTACT INFO</h3>
-      <ul>
-        <li><a href="#"><ion-icon name="logo-github"></ion-icon>github</a></li>
-        <li><a href="#"><img src="/assets/svgs/linkedin.svg" alt=""></ion-icon>linkedin</a></li>
-        <li><a href="#"><img src="/assets/svgs/mark-email-unread-outline-rounded.svg" alt=""></ion-icon>email</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="/src/script.js"></script>
-  
-</body>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+  </body>
 </html>
-
